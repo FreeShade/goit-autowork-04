@@ -1,14 +1,10 @@
 def split_list(lst):
-    if not lst:  # Якщо список порожній, повертаємо два порожніх списки
+    if not lst:
         return [], []
 
-    avg = sum(lst) / len(lst)  # Знаходимо середнє значення
+    avg = sum(lst) / len(lst)
 
-    lower = [
-        num for num in lst if num <= avg
-    ]  # Створюємо список елементів, менших або дорівнюють середньому
-    higher = [
-        num for num in lst if num > avg
-    ]  # Створюємо список елементів, більших за середнє
+    lower = [num for num in lst if num <= avg]  #
+    higher = [num for num in lst if num > avg]
 
-    return lower, higher  # Повертаємо кортеж з двома списками
+    return lower, higher
